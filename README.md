@@ -47,7 +47,7 @@ Processed started using draft HTML and CSS.
 ### Useful resources
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
-- [Google](https://www.google.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Google](https://www.google.com)
 
 
 ## Author
