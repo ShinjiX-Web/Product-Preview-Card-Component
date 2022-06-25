@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: hsl(30deg, 38%, 92%);
+}
+
+.container {
+  border-radius: 15px;
+  min-height: 55vh;
+  width: 40vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: hsl(0deg, 0%, 100%);
+}
+.container .image {
+  background: url("../../images/image-product-desktop.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 15px 0 0 15px;
+}
+.container .description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+.container .description-container .title {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 7px;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+}
+.container .description-container .name {
+  text-transform: capitalize;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 40px;
+}
+.container .description-container .description {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+.container .description-container .price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container .description-container .price .actual {
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  color: hsl(158deg, 36%, 37%);
+}
+.container .description-container .price .prev {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+  text-decoration: line-through;
+}
+.container .description-container button {
+  width: 100%;
+  background: hsl(158deg, 36%, 37%);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.container .description-container button:hover {
+  background: #1A4031;
+  cursor: pointer;
+}
+
+button {
+    transform: translateY(-0.25s);
+}
+
+footer {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    width: unset;
+    min-height: inherit;
+    margin: 13px;
+  }
+  .container .image {
+    border-radius: 15px 15px 0 0;
+  }
+  .container .description-container .title {
+    font-size: 0.8rem;
+  }
+  .container .description-container .name {
+    font-size: 2rem;
+  }
+  .container .description-container .description {
+    font-size: 0.8rem;
+  }
+  .container .description-container .price .actual {
+    font-size: 2rem;
+  }
+  .container .description-container .price .prev {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

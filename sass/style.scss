@@ -1,0 +1,140 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $cream;
+}
+
+.container {
+  border-radius: 15px;
+  min-height: 55vh;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: $white;
+
+  .image {
+    background: url("../../images/image-product-desktop.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+
+    .title {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      letter-spacing: 7px;
+      font-family: $font_family_montserrat;
+      color: $dark_grayish_blue;
+    }
+
+    .name {
+      text-transform: capitalize;
+      font-family: $font_family_fraunces;
+      font-weight: bold;
+      font-size: 2.4rem;
+      line-height: 40px;
+    }
+
+    .description {
+      font-family: $font_family_montserrat;
+      color: $dark_grayish_blue;
+      font-size: 1.1rem;
+      line-height: 25px;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .actual {
+        font-family: $font_family_fraunces;
+        font-size: 3rem;
+        color: $dark_cyan;
+      }
+
+      .prev {
+        font-family: $font_family_montserrat;
+        color: $dark_grayish_blue;
+        text-decoration: line-through;
+      }
+    }
+
+    button {
+      width: 100%;
+      background: $dark_cyan;
+      color: white;
+      font-family: $font_family_montserrat;
+      font-size: 1rem;
+      padding: 15px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      &:hover {
+        background: #1A4031;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    width: unset;
+    min-height: inherit;
+    margin: 13px;
+
+    .image {
+      border-radius: 15px 15px 0 0;
+    }
+
+    .description-container {
+      .title {
+        font-size: 0.8rem;
+      }
+
+      .name {
+        font-size: 2rem;
+      }
+
+      .description {
+        font-size: 0.8rem;
+      }
+
+      .price {
+        .actual {
+          font-size: 2rem;
+        }
+
+        .prev {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
