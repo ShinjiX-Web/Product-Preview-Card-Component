@@ -26,7 +26,7 @@ body {
   background: hsl(0deg, 0%, 100%);
 }
 .container .image {
-  background: url("../../images/image-product-desktop.jpg") no-repeat;
+  background: url(/images/image-product-desktop.jpg) no-repeat;
   background-size: cover;
   border-radius: 15px 0 0 15px;
 }
